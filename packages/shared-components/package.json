@@ -1,0 +1,4 @@
+{
+  "name": "@workspace/shared-components",
+  "main": "src/index.ts"
+}

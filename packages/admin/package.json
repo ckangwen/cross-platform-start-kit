@@ -1,0 +1,15 @@
+{
+  "name": "@workspace/admin",
+  "devDependencies": {
+    "@workspace/scripts": "workspace:*",
+    "@workspace/test-utils": "workspace:*",
+    "rollup-plugin-visualizer": "^5.8.3"
+  },
+  "scripts": {
+    "dev": "vite --open",
+    "build": "vite build",
+    "serve": "vite preview",
+    "test": "vitest",
+    "create-module": "workspace-cli create"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@workspace/scripts",
+  "bin": {
+    "workspace-cli": "./dist/index.cjs"
+  },
+  "main": "./dist/index.cjs",
+  "dependencies": {
+    "fs-extra": "^10.1.0",
+    "kolorist": "^1.6.0",
+    "minimist": "^1.2.7",
+    "prompts": "^2.4.2",
+    "set-value": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/commander": "^2.12.2",
+    "@types/fs-extra": "^9.0.13",
+    "@types/prompts": "^2.4.1",
+    "@types/set-value": "^4.0.1"
+  },
+  "scripts": {
+    "build": "unbuild"
+  }
+}

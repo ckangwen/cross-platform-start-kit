@@ -1,0 +1,410 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "牛叮当",
+    "version": "last"
+  },
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "后台-数据大屏接口",
+      "description": "后台-数据大屏接口"
+    },
+    {
+      "name": "app端-牛只管理接口",
+      "description": "app端-牛只管理接口"
+    },
+    {
+      "name": "app端-见犊补母模块接口",
+      "description": "app端-见犊补母模块接口"
+    },
+    {
+      "name": "后台-见犊补母管理模块接口",
+      "description": "后台-见犊补母管理模块接口"
+    },
+    {
+      "name": "后台-牧场管理接口",
+      "description": "后台-牧场管理接口"
+    },
+    {
+      "name": "后台-牛只补贴管理模块接口",
+      "description": "后台-牛只补贴管理模块接口"
+    },
+    {
+      "name": "后台-检测管理所接口",
+      "description": null
+    },
+    {
+      "name": "后台-检测价格接口",
+      "description": null
+    },
+    {
+      "name": "后台-大客户接口",
+      "description": null
+    },
+    {
+      "name": "后台-检验检测财务统计",
+      "description": null
+    },
+    {
+      "name": "后台-管理员模块接口",
+      "description": "后台-管理员模块接口"
+    },
+    {
+      "name": "后台-消息管理模块接口",
+      "description": "后台-消息管理模块接口"
+    },
+    {
+      "name": "后台-订单模块接口",
+      "description": "后台-订单模块接口"
+    },
+    {
+      "name": "后台-服务模块接口",
+      "description": "后台-服务模块接口"
+    },
+    {
+      "name": "后台-服务费管理模块接口",
+      "description": "后台-服务费管理模块接口"
+    },
+    {
+      "name": "后台-补贴管理模块接口",
+      "description": "后台-补贴管理模块接口"
+    },
+    {
+      "name": "后台-系统管理-管理员管理接口",
+      "description": "后台-系统管理-管理员管理接口"
+    },
+    {
+      "name": "后台-系统管理-资质审核接口",
+      "description": "后台-系统管理-资质审核接口"
+    },
+    {
+      "name": "后台-牛只管理接口",
+      "description": "后台-牛只管理接口"
+    },
+    {
+      "name": "后台-系统管理-用户管理接口",
+      "description": "后台-系统管理-用户管理接口"
+    },
+    {
+      "name": "后台-系统管理-牛只管理接口",
+      "description": "后台-系统管理-牛只管理接口"
+    },
+    {
+      "name": "后台-系统管理-组织机构管理接口",
+      "description": "后台-系统管理-组织机构管理接口"
+    },
+    {
+      "name": "app端-文章模块接口",
+      "description": "app端-文章模块接口"
+    },
+    {
+      "name": "app端-订单模块接口",
+      "description": "app端-订单模块接口"
+    },
+    {
+      "name": "app端-服务模块接口",
+      "description": "app端-服务模块接口"
+    },
+    {
+      "name": "app端-用户模块接口",
+      "description": "app端-用户模块接口"
+    },
+    {
+      "name": "app端-客户模块接口",
+      "description": "app端-客户模块接口"
+    },
+    {
+      "name": "app端-检验检测接口",
+      "description": "app端-检验检测接口"
+    },
+    {
+      "name": "app-通用模块",
+      "description": "app-通用模块"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/api_admin/data_screen/active": {
+      "post": {
+        "tags": [
+          "后台-数据大屏接口"
+        ],
+        "summary": "/api_admin/data_screen/active",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "type",
+            "in": "formData",
+            "required": true,
+            "description": "类型 0-查询专家活跃人数(默认) 1-查询养殖户活跃人数",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "description": "活跃人数",
+                  "type": "integer",
+                  "format": "int64",
+                  "x-go-name": "Data"
+                },
+                "message": {
+                  "type": "string",
+                  "default": "获取成功",
+                  "x-go-name": "Message"
+                },
+                "status": {
+                  "type": "integer",
+                  "format": "int64",
+                  "default": 1,
+                  "x-go-name": "Status"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api_admin/data_screen/ali_geo": {
+      "post": {
+        "tags": [
+          "后台-数据大屏接口"
+        ],
+        "summary": "/api_admin/data_screen/ali_geo",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "formData",
+            "required": true,
+            "description": "code",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "x-go-name": "Data"
+                },
+                "message": {
+                  "type": "string",
+                  "default": "获取成功",
+                  "x-go-name": "Message"
+                },
+                "status": {
+                  "type": "integer",
+                  "format": "int64",
+                  "default": 1,
+                  "x-go-name": "Status"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api_admin/data_screen/distribution": {
+      "post": {
+        "tags": [
+          "后台-数据大屏接口"
+        ],
+        "summary": "/api_admin/data_screen/distribution",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "x-go-name": "Data",
+                  "properties": {
+                    "cows": {
+                      "description": "牛只分布",
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "amount": {
+                            "description": "数量",
+                            "type": "integer",
+                            "format": "int64",
+                            "x-go-name": "Amount"
+                          },
+                          "city": {
+                            "description": "所在省市：例如：江苏省_南京市",
+                            "type": "string",
+                            "x-go-name": "City"
+                          }
+                        }
+                      },
+                      "x-go-name": "Cows"
+                    },
+                    "experts": {
+                      "description": "专家分布",
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "amount": {
+                            "description": "数量",
+                            "type": "integer",
+                            "format": "int64",
+                            "x-go-name": "Amount"
+                          },
+                          "city": {
+                            "description": "所在省市",
+                            "type": "string",
+                            "x-go-name": "City"
+                          }
+                        }
+                      },
+                      "x-go-name": "Experts"
+                    }
+                  }
+                },
+                "message": {
+                  "type": "string",
+                  "default": "获取成功",
+                  "x-go-name": "Message"
+                },
+                "status": {
+                  "type": "integer",
+                  "format": "int64",
+                  "default": 1,
+                  "x-go-name": "Status"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api_app/client/cow/batch/list": {
+      "post": {
+        "tags": [
+          "app端-牛只管理接口"
+        ],
+        "summary": "/api_app/client/cow/batch/list",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "parameters": [
+          {
+            "name": "start_time",
+            "in": "formData",
+            "required": false,
+            "description": "筛选开始时间",
+            "type": "string"
+          },
+          {
+            "name": "end_time",
+            "in": "formData",
+            "required": false,
+            "description": "筛选结束时间",
+            "type": "string"
+          },
+          {
+            "name": "page",
+            "in": "formData",
+            "required": false,
+            "description": "查询页码",
+            "type": "string"
+          },
+          {
+            "name": "limit",
+            "in": "formData",
+            "required": false,
+            "description": "每页数量",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "list": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "addTime": {
+                            "type": "string",
+                            "x-go-name": "AddTime"
+                          },
+                          "id": {
+                            "description": "批量导入表的ID",
+                            "type": "integer",
+                            "format": "int64",
+                            "x-go-name": "Id"
+                          },
+                          "importer": {
+                            "type": "string",
+                            "x-go-name": "Importer"
+                          },
+                          "success": {
+                            "type": "integer",
+                            "format": "int64",
+                            "x-go-name": "Success"
+                          },
+                          "title": {
+                            "type": "string",
+                            "x-go-name": "Title"
+                          }
+                        }
+                      },
+                      "x-go-name": "BatchList"
+                    },
+                    "total": {
+                      "description": "总数",
+                      "type": "integer",
+                      "format": "int64",
+                      "x-go-name": "Total"
+                    }
+                  },
+                  "x-go-name": "Data"
+                },
+                "message": {
+                  "type": "string",
+                  "default": "批量导入成功",
+                  "x-go-name": "Message"
+                },
+                "status": {
+                  "type": "integer",
+                  "format": "int64",
+                  "default": 1,
+                  "x-go-name": "Status"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

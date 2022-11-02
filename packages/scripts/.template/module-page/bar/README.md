@@ -1,0 +1,5 @@
+- bar.vue         页面
+  - 负责将各类东西组合在一起
+- .functional.tsx 纯函数组件，展示组件
+  - 负责将数据拿过来渲染
+- useXxx hook

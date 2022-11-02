@@ -1,0 +1,14 @@
+{
+  "name": "@workspace/test-utils",
+  "devDependencies": {
+    "@apidevtools/swagger-parser": "^10.1.0",
+    "@faker-js/faker": "^7.6.0",
+    "@types/qs": "^6.9.7",
+    "msw": "^0.47.4",
+    "qs": "^6.11.0"
+  },
+  "scripts": {
+    "test": "vitest"
+  },
+  "main": "./src/index.ts"
+}
